@@ -1,0 +1,8 @@
+models:
+  schema2:
+    +incremental:
+      column: modified_at  # Replace with the actual column indicating the update time
+
+schedules:
+  - cron: "*/15 * * * 1-5"  # Every 15 minutes, Monday to Friday
+    models: [schema1/sch1_t1, schema2/sch2_t1]  # Run these models
